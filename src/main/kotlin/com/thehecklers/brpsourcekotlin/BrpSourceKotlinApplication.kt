@@ -51,7 +51,7 @@ class GateAgent(private val generator: PassengerGenerator) {
 }
 
 /*
-
+MH: This works too (toggle settings in application.properties too)
 @EnableBinding(Source::class)
 @EnableScheduling
 class GateAgent(private val source: Source, private val generator: PassengerGenerator) {
