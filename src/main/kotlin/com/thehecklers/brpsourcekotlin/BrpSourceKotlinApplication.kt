@@ -35,9 +35,10 @@ class GateAgent(private val generator: PassengerGenerator) {
 }
 */
 
-@EnableBinding(Source::class)
+@Configuration
 class GateAgent(private val generator: PassengerGenerator) {
     @Bean
+//    MH: This doesn't work...yet ;)
 //    fun checkIn(): () -> Flux<Passenger> {
 //        return {
         fun checkIn(): Supplier<Flux<Passenger>> {
