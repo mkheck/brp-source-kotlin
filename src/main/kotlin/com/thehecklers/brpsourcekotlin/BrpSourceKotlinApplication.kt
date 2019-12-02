@@ -41,13 +41,12 @@ class GateAgent(private val generator: PassengerGenerator) {
 //    MH: This doesn't work...yet ;)
 //    fun checkIn(): () -> Flux<Passenger> {
 //        return {
-        fun checkIn(): Supplier<Flux<Passenger>> {
-        return Supplier{
-            Flux.interval(Duration.ofSeconds(1))
-                .onBackpressureDrop()
-                .map { generator.generate() }
-        }
+    fun checkIn(): Supplier<Flux<Passenger>> = Supplier {
+        Flux.interval(Duration.ofSeconds(1))
+            .onBackpressureDrop()
+            .map { generator.generate() }
     }
+
 }
 
 /*
