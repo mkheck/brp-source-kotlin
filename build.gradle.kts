@@ -16,7 +16,7 @@ repositories {
 	maven { url = uri("https://repo.spring.io/milestone") }
 }
 
-extra["springCloudVersion"] = "Hoxton.RC2"
+extra["springCloudVersion"] = "Hoxton.RELEASE"
 
 dependencies {
 	implementation("org.springframework.boot:spring-boot-starter-amqp")
@@ -26,7 +26,7 @@ dependencies {
 	implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
 	implementation("org.jetbrains.kotlinx:kotlinx-coroutines-reactor")
 	implementation("org.springframework.cloud:spring-cloud-function-kotlin")
-	implementation("org.springframework.cloud:spring-cloud-stream:3.0.0.RELEASE")
+	implementation("org.springframework.cloud:spring-cloud-stream")
 	implementation("org.springframework.cloud:spring-cloud-stream-binder-kafka")
 	implementation("org.springframework.cloud:spring-cloud-stream-binder-rabbit")
 	implementation("org.springframework.kafka:spring-kafka")

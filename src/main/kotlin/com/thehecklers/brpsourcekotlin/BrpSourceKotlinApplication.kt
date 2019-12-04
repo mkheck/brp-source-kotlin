@@ -23,22 +23,10 @@ fun main(args: Array<String>) {
     runApplication<BrpSourceKotlinApplication>(*args)
 }
 
-/*
 @Configuration
 class GateAgent(private val generator: PassengerGenerator) {
     @Bean
-    fun checkIn() = {
-        Flux.interval(Duration.ofSeconds(1))
-            .onBackpressureDrop()
-            .map { generator.generate() }
-    }
-}
-*/
-
-@Configuration
-class GateAgent(private val generator: PassengerGenerator) {
-    @Bean
-//    MH: This doesn't work...yet ;)
+//    MH: Not yet available, but coming soon
 //    fun checkIn(): () -> Flux<Passenger> {
 //        return {
     fun checkIn(): Supplier<Flux<Passenger>> = Supplier {
